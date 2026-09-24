@@ -17,8 +17,6 @@ let C = {}, openKey = null, query = "", type = "appointment", rating = 0, review
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
 const match = (o, q) => !q || JSON.stringify(o).toLowerCase().includes(q.toLowerCase());
-const STAR_TXT = ["Poor", "Fair", "Good", "Very good", "Excellent"];
-function paintStars(n) { [...$("stars").children].forEach((b, i) => { b.classList.toggle("on", i < n); b.setAttribute("aria-pressed", i < rating); }); $("star-txt").textContent = n ? `${n} / 5 — ${STAR_TXT[n - 1]}` : "Tap a star to rate"; }
 const stars = n => '<i class="fa-solid fa-star"></i>'.repeat(n);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 // local date as YYYY-MM-DD (toISOString() is UTC and can show "yesterday" in India early morning)
@@ -137,9 +135,7 @@ function bind() {
   $("search").oninput = e => { const was = query; query = e.target.value.trim(); render(); if (query && !was) $("packages").scrollIntoView(); };
   $("cats").onclick = e => { const b = e.target.closest("button"); if (b) { $("search").value = query = b.dataset.q.split(" ")[0]; render(); $("packages").scrollIntoView({ behavior: "smooth" }); } };
   Object.keys(LISTS).forEach(k => $("more-" + k).onclick = () => { const y = $("more-" + k).getBoundingClientRect().top; openKey = openKey === k ? null : k; render(); window.scrollBy(0, $("more-" + k).getBoundingClientRect().top - y); });
-  $("stars").onclick = e => { const s = e.target.closest("[data-s]"); if (!s) return; rating = +s.dataset.s; paintStars(rating); };
-  $("stars").onmouseover = e => { const s = e.target.closest("[data-s]"); if (s) paintStars(+s.dataset.s); };
-  $("stars").onmouseleave = () => paintStars(rating);
+  $("stars").onclick = e => { const s = e.target.dataset.s; if (!s) return; rating = +s; [...$("stars").children].forEach((b, i) => b.classList.toggle("on", i < rating)); };
   document.addEventListener("click", e => {
     const t = e.target;
     if (t.closest("[data-close]") || t.id === "drawer-o") $("drawer-o").classList.remove("open");
@@ -268,7 +264,7 @@ async function onFeedback(e) {
   } catch (err) { a.textContent = "Could not send your feedback. Please try again."; a.className = "alert err"; return; }
   reviews.unshift(r);
   try { localStorage.setItem("labReviews", JSON.stringify(reviews.filter(x => x.date === "Just now"))); } catch { }
-  renderReviews(); e.target.reset(); rating = 0; paintStars(0);
+  renderReviews(); e.target.reset(); rating = 0; [...$("stars").children].forEach(b => b.classList.remove("on"));
   a.textContent = "Thank you! Your feedback was sent successfully and is now live above." + (USE_DUMMY_RESPONSE ? " (Test mode: dummy answer, not saved to Google Sheet yet.)" : ""); a.className = "alert ok";
 }
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -90,6 +90,132 @@
     <div class="two-f"><label>Name *<input name="name" required></label><label>Email *<input name="email" type="email" required></label></div>
     <label>Your rating *</label><div class="stars" id="stars">
       <button type="button" data-s="1">★</button><button type="button" data-s="2">★</button><button type="button" data-s="3">★</button><button type="button" data-s="4">★</button><button type="button" data-s="5">★</button></div>
+    <label>Note *<textarea name="message" rows="4" required placeholder="Tell us about your visit..."></textarea></label>
+    <button class="btn btn-primary btn-block" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Feedback</button><div class="alert" id="fb-alert"></div>
+  </form>
+</div></section>
+
+<section id="contact" class="section"><div class="container two-col">
+  <div><span class="eyebrow">Find Us</span><h2>Visit the Lab</h2>
+    <ul class="contact"><li><i class="fa-solid fa-location-dot"></i> <span id="c-addr"></span></li><li><i class="fa-solid fa-phone"></i> <span id="c-phone"></span></li><li><i class="fa-solid fa-envelope"></i> <span id="c-mail"></span></li><li><i class="fa-solid fa-clock"></i> <span id="c-hours"></span></li></ul>
+    <div class="row" id="socials"></div><a id="directions" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+  </div>
+  <iframe id="map" class="map" loading="lazy" title="Lab location"></iframe>
+</div></section>
+
+<footer class="footer">
+  <div class="cta-strip"><div class="container bar"><div><h3>Need help choosing a test?</h3><p>Talk to our team — we reply within minutes.</p></div><div class="row"><a class="btn btn-light" id="f-call"><i class="fa-solid fa-phone"></i> Call Now</a><a class="btn btn-primary" id="f-wa" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div></div></div>
+  <div class="container f-grid">
+    <div><div class="brand"><div class="logo"><i class="fa-solid fa-microscope"></i></div><b class="w" id="f-name"></b></div><p id="f-about"></p><div class="badges" id="f-badges"></div><div class="row" id="f-socials"></div></div>
+    <div><h4>Quick Links</h4><a href="#booking">Book Appointment</a><a href="#packages">Health Packages</a><a href="#doctors">Our Doctors</a><a href="#videos">Videos</a><a href="#blogs">Articles</a><a href="#feedback">Feedback</a></div>
+    <div><h4>Services</h4><a href="#booking" data-book="appointment">Lab / Doctor Appointment</a><a href="#booking" data-book="home">Home Sample Collection</a><a href="#booking" data-book="doctorvisit">Doctor Home Visit</a><a href="#packages">Preventive Checkups</a></div>
+    <div><h4>Contact</h4><p><i class="fa-solid fa-location-dot"></i> <span id="f-addr"></span></p><p><i class="fa-solid fa-phone"></i> <span id="f-phone"></span></p><p><i class="fa-solid fa-envelope"></i> <span id="f-mail"></span></p><p><i class="fa-solid fa-clock"></i> <span id="f-hours"></span></p></div>
+  </div>
+  <div class="f-bottom"><div class="container bar"><span>&copy; <span id="year"></span> <span id="foot-name"></span>. All rights reserved.</span><span>Reports are for medical use; consult your doctor for interpretation.</span></div></div>
+</footer>
+<a id="wa" class="wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="totop" class="totop" type="button" aria-label="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+
+<div class="overlay" id="drawer-o"><aside class="drawer" id="drawer"><button class="close" data-close>&times;</button><div id="drawer-body"></div></aside></div>
+<script src="script.js"></script>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="meta-title">Diagnostic Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-bar"><div class="container bar">
+  <span><i class="fa-solid fa-phone"></i> <a id="top-phone" href="#"></a> &nbsp; <i class="fa-solid fa-envelope"></i> <span id="top-email"></span></span>
+  <span class="hide-m"><i class="fa-solid fa-clock"></i> <span id="top-hours"></span></span>
+</div></div>
+
+<header class="navbar"><div class="container bar">
+  <a href="#home" class="brand"><div class="logo"><i class="fa-solid fa-microscope"></i></div><div><b id="brand-name"></b><small id="brand-tag"></small></div></a>
+  <nav id="nav">
+    <a href="#booking">Book</a><a href="#packages">Packages</a><a href="#doctors">Doctors</a><a href="#home-services">Home Services</a><a href="#feedback">Feedback</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="btn btn-primary" data-book="appointment"><i class="fa-solid fa-calendar-check"></i> <span class="hide-m">Book Test</span></button>
+  <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+</div></header>
+
+<section id="home" class="hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="dots" id="dots"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="pill"><i class="fa-solid fa-shield-halved"></i> <span id="accred"></span></span>
+      <h1 id="hero-title"></h1><p id="hero-sub"></p>
+      <div class="row"><button class="btn btn-primary btn-lg" data-book="appointment">Book a Test</button><a href="#packages" class="btn btn-light btn-lg">View Packages</a></div>
+    </div>
+    <div class="search-card">
+      <h3><i class="fa-solid fa-magnifying-glass"></i> Search tests, packages, doctors</h3>
+      <input id="search" type="search" placeholder="e.g. HbA1c, Thyroid, Cardiac, Gynaecologist">
+      <div id="search-hint" class="muted">Type to filter packages &amp; doctors below.</div>
+      <div class="chips" id="cats"></div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="stats" id="stats"></div></div>
+
+
+
+<section id="booking" class="section alt"><div class="container">
+  <div class="head"><span class="eyebrow">Book Online</span><h2>Schedule Your Visit</h2><p class="sub">Choose a service, fill in your details and we will confirm by call or WhatsApp.</p></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="book-grid">
+    <div class="panel" id="book-panel">
+      <form id="book-form"><div id="m-fields"></div><button class="btn btn-primary btn-block btn-lg" id="m-submit" type="submit"><i class="fa-solid fa-paper-plane"></i> Confirm Booking Request</button><div class="alert" id="m-alert"></div></form>
+      <div id="success" class="success hide"></div>
+    </div>
+    <aside><div class="panel" id="summary"></div></aside>
+  </div>
+</div></section>
+
+<section id="packages" class="section alt"><div class="container">
+  <div class="head"><span class="eyebrow">Preventive Care</span><h2>Health Checkup Packages</h2></div>
+  <div class="grid three" id="packages-grid"></div>
+  <div class="center"><button class="btn btn-outline" id="more-packages">View more packages</button></div>
+</div></section>
+
+<section id="doctors" class="section"><div class="container">
+  <div class="head"><span class="eyebrow">Medical Experts</span><h2>Consult Our Specialists</h2></div>
+  <div class="grid three" id="doctors-grid"></div>
+  <div class="center"><button class="btn btn-outline" id="more-doctors">View more doctors</button></div>
+</div></section>
+
+<section id="home-services" class="section alt"><div class="container">
+  <div class="head"><span class="eyebrow">At Your Doorstep</span><h2>Home Services</h2></div>
+  <div class="grid two" id="home-grid"></div>
+</div></section>
+
+<section id="videos" class="section"><div class="container">
+  <div class="head"><span class="eyebrow">Learn</span><h2>Health Videos</h2></div>
+  <div class="grid three" id="videos-grid"></div><div class="center"><button class="btn btn-outline" id="more-videos"></button></div>
+</div></section>
+<section id="blogs" class="section alt"><div class="container">
+  <div class="head"><span class="eyebrow">Read</span><h2>Health Articles</h2></div>
+  <div class="grid three" id="blogs-grid"></div><div class="center"><button class="btn btn-outline" id="more-blogs"></button></div>
+</div></section>
+
+<section id="feedback" class="section"><div class="container two-col">
+  <div><span class="eyebrow">Patient Voices</span><h2>What our patients say</h2><div class="avg" id="avg"></div><div id="reviews"></div></div>
+  <form class="panel" id="feedback-form">
+    <h3>Share your experience</h3>
+    <div class="two-f"><label>Name *<input name="name" required></label><label>Email *<input name="email" type="email" required></label></div>
+    <label>Your rating *</label><div class="stars" id="stars">
+      <button type="button" data-s="1">★</button><button type="button" data-s="2">★</button><button type="button" data-s="3">★</button><button type="button" data-s="4">★</button><button type="button" data-s="5">★</button></div><div class="star-txt" id="star-txt">Tap a star to rate</div>
     <label>Note *<textarea name="message" rows="4" required placeholder="Tell us about your visit..."></textarea></label>
     <button class="btn btn-primary btn-block" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Feedback</button><div class="alert" id="fb-alert"></div>
   </form>
