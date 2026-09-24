@@ -8,7 +8,7 @@
 //  The success message ("Booking done" / "Feedback sent") is shown ONLY when the
 //  answer is { status: "success" }. Any other answer shows an error message.
 // =====================================================================
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXD709hyjcYCq1e9m01YlokQXrVxYkUFgYnJIdKkw-Pg4ST00Khei_d2FLgrjzy4azwg/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyrRbQPDv7x9aIvpzPUyrWHv-jYJ5yFHE9B4GJ2zG_FsW9QmzD2FCGM7VbBeE2NEWjCVQ/exec";
 const USE_DUMMY_RESPONSE = false;   // <-- change to false when your Google Script is ready
 const DUMMY_SHOULD_FAIL = true;   // testing only: true = dummy answer is "error"
 
