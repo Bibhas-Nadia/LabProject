@@ -41,13 +41,13 @@ var CONFIG = {
   SHEET_LOGS: "Logs",
 
   TIMEZONE: "Asia/Kolkata",
-  LAB_NAME: "AshokK Laboratory",
-  LAB_PHONE: "7596087983",
+  LAB_NAME: "Ashok Laboratory",
+  LAB_PHONE: "7384513355",
 
   // ---- E-mail settings
   SEND_PATIENT_EMAIL: true,    // true  -> patient gets a confirmation e-mail after booking (Gmail limit ~100 mails/day)
-  LAB_EMAIL: "ashoklab86@gmail.com",  // patient replies go here (Reply-To). Also used by testEmail()
-  NOTIFY_EMAIL: "",            // e.g. "ashoklab86@gmail.com" -> YOU get an alert for every booking/feedback. "" = off
+  LAB_EMAIL: "bibhasdas1205@gmail.com",  // patient replies go here (Reply-To). Also used by testEmail()
+  NOTIFY_EMAIL: "",            // e.g. "bibhasdas1205@gmail.com" -> YOU get an alert for every booking/feedback. "" = off
 
   MAX_DAYS_AHEAD: 90,          // bookings allowed up to this many days in future
   CLOSED_ON_SUNDAY: false,     // true -> reject Sunday dates
@@ -292,9 +292,9 @@ function handleBooking_(d, type) {
     var mailJob = null;
     var booking = { ref: ref, service: service, item: item, dateReadable: dateInfo.readable, slot: slot,
       name: name, phone: phone, email: email, address: address, pincode: pincode, notes: enquiry };
-    mailJob = booking;   // e-mails are sent in "finally", after the sheet lock is released
+      mailJob = booking;   // e-mails are sent in "finally", after the sheet lock is released
 
-    return { status: "success", code: "OK", message: "Booking saved successfully.", ref: ref };
+      return { status: "success", code: "OK", message: "Booking saved successfully.", ref: ref };
 
   } finally {
     try { lock.releaseLock(); } catch (x) { /* ignore */ }
@@ -567,7 +567,7 @@ function todayText_() { return Utilities.formatDate(new Date(), CONFIG.TIMEZONE,
 function mailSafe_(s) { return String(s || "").replace(/[\r\n]+/g, " "); }   // no header injection
 function esc_(s) {                                                          // HTML-escape (XSS safe e-mail)
   return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
 /** Sends the lab alert and the patient confirmation. Each has its own try/catch,
@@ -578,12 +578,12 @@ function sendBookingMails_(b) {
       MailApp.sendEmail({
         to: CONFIG.NOTIFY_EMAIL, name: CONFIG.LAB_NAME,
         subject: mailSafe_("New booking " + b.ref + " - " + b.service + " - " + b.dateReadable),
-        body: ["New booking received", "",
-          "Ref: " + b.ref, "Service: " + b.service, "Item: " + b.item,
-          "Date: " + b.dateReadable, "Time: " + b.slot, "",
-          "Patient: " + b.name, "Mobile: " + b.phone, "Email: " + b.email,
-          (b.address ? "Address: " + b.address + " - " + b.pincode : ""),
-          (b.notes ? "Notes: " + b.notes : "")].filter(String).join("\n")
+                        body: ["New booking received", "",
+                        "Ref: " + b.ref, "Service: " + b.service, "Item: " + b.item,
+                        "Date: " + b.dateReadable, "Time: " + b.slot, "",
+                        "Patient: " + b.name, "Mobile: " + b.phone, "Email: " + b.email,
+                        (b.address ? "Address: " + b.address + " - " + b.pincode : ""),
+                        (b.notes ? "Notes: " + b.notes : "")].filter(String).join("\n")
       });
     } catch (err) { logMailError_("lab alert", err); }
   }
@@ -610,29 +610,29 @@ function patientMail_(b, to) {
   ].filter(Boolean);
 
   var text = ["Dear " + b.name + ",", "",
-    "Thank you for booking with " + CONFIG.LAB_NAME + ". Your booking request is received.", ""]
-    .concat(rows.map(function (r) { return r[0] + ": " + r[1]; }))
-    .concat(["", "Our team will call you on " + b.phone + " to confirm.",
-      "Need help? Call " + CONFIG.LAB_PHONE + ".", "", CONFIG.LAB_NAME]).join("\n");
+  "Thank you for booking with " + CONFIG.LAB_NAME + ". Your booking request is received.", ""]
+  .concat(rows.map(function (r) { return r[0] + ": " + r[1]; }))
+  .concat(["", "Our team will call you on " + b.phone + " to confirm.",
+          "Need help? Call " + CONFIG.LAB_PHONE + ".", "", CONFIG.LAB_NAME]).join("\n");
 
-  var trs = rows.map(function (r) {
-    return '<tr><td style="padding:8px 12px;color:#64748b;border-bottom:1px solid #e2e8f0;white-space:nowrap">' + esc_(r[0]) +
-           '</td><td style="padding:8px 12px;font-weight:600;border-bottom:1px solid #e2e8f0">' + esc_(r[1]) + '</td></tr>';
-  }).join("");
-  var html =
-    '<div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:auto;color:#0f172a">' +
-    '<div style="background:#0e7490;color:#fff;padding:18px 20px;border-radius:12px 12px 0 0;font-size:18px;font-weight:bold">' + esc_(CONFIG.LAB_NAME) + '</div>' +
-    '<div style="border:1px solid #e2e8f0;border-top:0;padding:20px;border-radius:0 0 12px 12px">' +
-    '<p style="margin:0 0 6px">Dear <b>' + esc_(b.name) + '</b>,</p>' +
-    '<p style="margin:0 0 16px">Thank you for booking with us. <b style="color:#16a34a">Your booking request is received.</b></p>' +
-    '<table style="border-collapse:collapse;width:100%;font-size:14px">' + trs + '</table>' +
-    '<p style="margin:16px 0 4px">Our team will call you on <b>' + esc_(b.phone) + '</b> to confirm.</p>' +
-    '<p style="margin:0;color:#64748b;font-size:13px">Need help? Call ' + esc_(CONFIG.LAB_PHONE) + '. Please keep your booking reference handy.</p>' +
-    '</div></div>';
+          var trs = rows.map(function (r) {
+            return '<tr><td style="padding:8px 12px;color:#64748b;border-bottom:1px solid #e2e8f0;white-space:nowrap">' + esc_(r[0]) +
+            '</td><td style="padding:8px 12px;font-weight:600;border-bottom:1px solid #e2e8f0">' + esc_(r[1]) + '</td></tr>';
+          }).join("");
+          var html =
+          '<div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:auto;color:#0f172a">' +
+          '<div style="background:#0e7490;color:#fff;padding:18px 20px;border-radius:12px 12px 0 0;font-size:18px;font-weight:bold">' + esc_(CONFIG.LAB_NAME) + '</div>' +
+          '<div style="border:1px solid #e2e8f0;border-top:0;padding:20px;border-radius:0 0 12px 12px">' +
+          '<p style="margin:0 0 6px">Dear <b>' + esc_(b.name) + '</b>,</p>' +
+          '<p style="margin:0 0 16px">Thank you for booking with us. <b style="color:#16a34a">Your booking request is received.</b></p>' +
+          '<table style="border-collapse:collapse;width:100%;font-size:14px">' + trs + '</table>' +
+          '<p style="margin:16px 0 4px">Our team will call you on <b>' + esc_(b.phone) + '</b> to confirm.</p>' +
+          '<p style="margin:0;color:#64748b;font-size:13px">Need help? Call ' + esc_(CONFIG.LAB_PHONE) + '. Please keep your booking reference handy.</p>' +
+          '</div></div>';
 
-  var mail = { to: to, name: CONFIG.LAB_NAME, subject: mailSafe_("Booking received - Ref " + b.ref + " | " + CONFIG.LAB_NAME), body: text, htmlBody: html };
-  if (CONFIG.LAB_EMAIL) mail.replyTo = CONFIG.LAB_EMAIL;
-  return mail;
+          var mail = { to: to, name: CONFIG.LAB_NAME, subject: mailSafe_("Booking received - Ref " + b.ref + " | " + CONFIG.LAB_NAME), body: text, htmlBody: html };
+          if (CONFIG.LAB_EMAIL) mail.replyTo = CONFIG.LAB_EMAIL;
+          return mail;
 }
 
 function sendFeedbackMail_(f) {
@@ -641,7 +641,7 @@ function sendFeedbackMail_(f) {
     MailApp.sendEmail({
       to: CONFIG.NOTIFY_EMAIL, name: CONFIG.LAB_NAME,
       subject: mailSafe_("New feedback " + f.id + " - " + f.rating + " stars"),
-      body: ["ID: " + f.id, "Name: " + f.name, "Email: " + f.email, "Rating: " + f.rating + "/5", "", f.message].join("\n")
+                      body: ["ID: " + f.id, "Name: " + f.name, "Email: " + f.email, "Rating: " + f.rating + "/5", "", f.message].join("\n")
     });
   } catch (err) { logMailError_("feedback alert", err); }
 }
@@ -726,9 +726,9 @@ function testEmail() {
   var to = CONFIG.LAB_EMAIL || CONFIG.NOTIFY_EMAIL;
   if (!to) throw new Error("Set CONFIG.LAB_EMAIL first.");
   var b = { ref: "AK000000", service: "Home Sample Collection", item: "Home Sample Collection",
-            dateReadable: "Test date", slot: "7:00 - 9:00 AM", name: "Test Patient", phone: "9876543210",
-            email: to, address: "12 Test Road, Jodhpur Park", pincode: "700068", notes: "" };
-  Logger.log("Mails you can still send today: " + MailApp.getRemainingDailyQuota());
-  MailApp.sendEmail(patientMail_(b, to));
-  Logger.log("Test e-mail sent to " + to + ". Check Inbox AND Spam.");
+    dateReadable: "Test date", slot: "7:00 - 9:00 AM", name: "Test Patient", phone: "9876543210",
+    email: to, address: "12 Test Road, Jodhpur Park", pincode: "700068", notes: "" };
+    Logger.log("Mails you can still send today: " + MailApp.getRemainingDailyQuota());
+    MailApp.sendEmail(patientMail_(b, to));
+    Logger.log("Test e-mail sent to " + to + ". Check Inbox AND Spam.");
 }
