@@ -8,9 +8,9 @@
 //  The success message ("Booking done" / "Feedback sent") is shown ONLY when the
 //  answer is { status: "success" }. Any other answer shows an error message.
 // =====================================================================
-const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
-const USE_DUMMY_RESPONSE = true;   // <-- change to false when your Google Script is ready
-const DUMMY_SHOULD_FAIL = false;   // testing only: true = dummy answer is "error"
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXD709hyjcYCq1e9m01YlokQXrVxYkUFgYnJIdKkw-Pg4ST00Khei_d2FLgrjzy4azwg/exec";
+const USE_DUMMY_RESPONSE = false;   // <-- change to false when your Google Script is ready
+const DUMMY_SHOULD_FAIL = true;   // testing only: true = dummy answer is "error"
 
 const LIMIT = 3;
 let C = {}, openKey = null, query = "", type = "appointment", rating = 0, reviews = [];
