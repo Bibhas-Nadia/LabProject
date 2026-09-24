@@ -1,0 +1,418 @@
+{
+ "labInfo": {
+  "name": "AshokK Laboratory",
+  "tagline": "Clinical Testing Centre",
+  "address": "390B, Jodhpur Park, Kolkata - 700068, West Bengal",
+  "phone": "7596087983",
+  "email": "ashoklab86@gmail.com",
+  "workingHours": "Mon - Sat: 7:00 AM - 8:00 PM",
+  "whatsapp": "7596087983",
+  "accreditation": "NABL Accredited & ISO Certified Laboratory",
+  "socialMedia": {
+   "facebook": "https://facebook.com/ashoklaboratory",
+   "instagram": "https://instagram.com/ashoklaboratory",
+   "twitter": "https://twitter.com/ashoklaboratory",
+   "youtube": "https://youtube.com/@ashoklaboratory",
+   "linkedin": "https://linkedin.com/company/ashoklaboratory"
+  },
+  "googleMaps": {
+   "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.7876878297746!2d88.36154331535212!3d22.5027599852187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270d440000001%3A0x86b039cb01170bd7!2sAshok%20Laboratory!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin",
+   "locationUrl": "https://maps.app.goo.gl/AshokLaboratoryJodhpurPark",
+   "coordinates": {
+    "latitude": 22.50276,
+    "longitude": 88.36154
+   }
+  }
+ },
+ "hero": {
+  "title": "Your Health, Our Accurate Diagnosis",
+  "subtitle": "Delivering reliable, high-quality medical analysis with cutting-edge technology and care.",
+  "bgImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80",
+  "ctaText": "Book a Test Now",
+  "ctaLink": "#booking",
+  "bgImages": [
+   "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80",
+   "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1600&q=80",
+   "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1600&q=80"
+  ]
+ },
+ "stats": [
+  {
+   "count": "1 Lakh+",
+   "label": "Samples Processed / Mo",
+   "icon": "fa-flask"
+  },
+  {
+   "count": "2,000+",
+   "label": "Available Tests",
+   "icon": "fa-vial"
+  },
+  {
+   "count": "100+",
+   "label": "Expert Doctors",
+   "icon": "fa-user-doctor"
+  },
+  {
+   "count": "99.8%",
+   "label": "Accuracy Rate",
+   "icon": "fa-circle-check"
+  }
+ ],
+ "testCategories": [
+  {
+   "id": "cat-1",
+   "name": "Clinical Pathology",
+   "icon": "fa-microscope"
+  },
+  {
+   "id": "cat-2",
+   "name": "Biochemistry",
+   "icon": "fa-dna"
+  },
+  {
+   "id": "cat-3",
+   "name": "Haematology",
+   "icon": "fa-droplet"
+  },
+  {
+   "id": "cat-4",
+   "name": "Microbiology & Serology",
+   "icon": "fa-virus"
+  },
+  {
+   "id": "cat-5",
+   "name": "Molecular Testing",
+   "icon": "fa-vials"
+  },
+  {
+   "id": "cat-6",
+   "name": "Histopathology & Cytopathology",
+   "icon": "fa-notes-medical"
+  }
+ ],
+ "packages": [
+  {
+   "id": "pkg-1",
+   "name": "Preventive Health Checkup - BASIC",
+   "parameters": "7 Parameters",
+   "price": "₹2,100",
+   "oldPrice": "₹3,775",
+   "discount": "44% OFF",
+   "badge": "Popular",
+   "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80",
+   "testsIncluded": [
+    "Complete Blood Count (CBC)",
+    "Fasting Blood Sugar (FBS)",
+    "Lipid Profile Basic",
+    "Kidney Function Test (KFT)",
+    "Liver Function Test (LFT)",
+    "Thyroid Stimulating Hormone (TSH)",
+    "Urine Routine Examination"
+   ]
+  },
+  {
+   "id": "pkg-2",
+   "name": "Cardiac (Heart) Panel Basic",
+   "parameters": "7 Parameters",
+   "price": "₹2,100",
+   "oldPrice": "₹3,840",
+   "discount": "45% OFF",
+   "badge": "Specialist",
+   "image": "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80",
+   "testsIncluded": [
+    "High-Sensitivity C-Reactive Protein (hs-CRP)",
+    "Lipid Profile Extended",
+    "Apolipoprotein A1 & B",
+    "Homocysteine Level",
+    "ECG Screening",
+    "HbA1c",
+    "Serum Electrolytes"
+   ]
+  },
+  {
+   "id": "pkg-3",
+   "name": "Diabetic Basic Profile",
+   "parameters": "4 Parameters",
+   "price": "₹1,000",
+   "oldPrice": "₹1,780",
+   "discount": "44% OFF",
+   "badge": "Essential",
+   "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80",
+   "testsIncluded": [
+    "Fasting Blood Sugar (FBS)",
+    "Post Prandial Blood Sugar (PPBS)",
+    "HbA1c (Glycated Hemoglobin)",
+    "Urine Microalbumin"
+   ]
+  },
+  {
+   "id": "pkg-4",
+   "name": "Women's Wellness Package",
+   "parameters": "8 Parameters",
+   "price": "₹2,600",
+   "oldPrice": "₹4,500",
+   "discount": "42% OFF",
+   "badge": "Women",
+   "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+   "testsIncluded": [
+    "CBC",
+    "Thyroid Profile (T3,T4,TSH)",
+    "Vitamin D",
+    "Vitamin B12",
+    "Iron Studies",
+    "HbA1c",
+    "Calcium",
+    "Urine Routine"
+   ]
+  },
+  {
+   "id": "pkg-5",
+   "name": "Senior Citizen Package",
+   "parameters": "9 Parameters",
+   "price": "₹3,200",
+   "oldPrice": "₹5,600",
+   "discount": "43% OFF",
+   "badge": "Senior",
+   "image": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80",
+   "testsIncluded": [
+    "CBC",
+    "Lipid Profile",
+    "KFT",
+    "LFT",
+    "HbA1c",
+    "PSA / Vitamin D",
+    "Thyroid Profile",
+    "ECG",
+    "Urine Routine"
+   ]
+  },
+  {
+   "id": "pkg-6",
+   "name": "Full Body Checkup",
+   "parameters": "12 Parameters",
+   "price": "₹4,500",
+   "oldPrice": "₹8,000",
+   "discount": "44% OFF",
+   "badge": "Complete",
+   "image": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=600&q=80",
+   "testsIncluded": [
+    "CBC",
+    "Lipid Profile",
+    "KFT",
+    "LFT",
+    "Thyroid Profile",
+    "HbA1c",
+    "Vitamin D & B12",
+    "Iron Studies",
+    "Electrolytes",
+    "Urine Routine",
+    "Stool Routine",
+    "ESR"
+   ]
+  }
+ ],
+ "doctors": [
+  {
+   "id": "doc-1",
+   "name": "Dr. Lipika D. Mukherjee",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (G&O)",
+   "experience": "14+ Years Experience",
+   "fee": "₹600",
+   "availability": "Mon, Wed, Fri (4:00 PM - 7:00 PM)",
+   "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+   "id": "doc-2",
+   "name": "Dr. Devjit Majumdar",
+   "specialty": "General Medicine",
+   "qualifications": "MBBS, MD (MED)",
+   "experience": "18+ Years Experience",
+   "fee": "₹500",
+   "availability": "Tue, Thu, Sat (10:00 AM - 1:00 PM)",
+   "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+   "id": "doc-3",
+   "name": "Dr. Monideep Banerjee",
+   "specialty": "Orthopaedic",
+   "qualifications": "MBBS, MS, IAOS",
+   "experience": "12+ Years Experience",
+   "fee": "₹700",
+   "availability": "Mon, Thu (5:00 PM - 8:00 PM)",
+   "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+   "id": "doc-4",
+   "name": "Dr. Sanjib Roy",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, DCH",
+   "experience": "10+ Years Experience",
+   "fee": "₹500",
+   "availability": "Tue, Fri (5:00 PM - 8:00 PM)",
+   "image": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+   "id": "doc-5",
+   "name": "Dr. Anita Sen",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Derma)",
+   "experience": "9+ Years Experience",
+   "fee": "₹600",
+   "availability": "Wed, Sat (4:00 PM - 7:00 PM)",
+   "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80"
+  }
+ ],
+ "homeServices": {
+  "sampleCollection": {
+   "title": "Home Sample Collection",
+   "description": "Safe and hygienic blood/urine sample collection by trained phlebotomists at your doorstep.",
+   "fee": "Free for orders above ₹500",
+   "pincodesServed": [
+    "700068",
+    "700031",
+    "700045",
+    "700019",
+    "700092"
+   ],
+   "timeSlots": [
+    "7:00 - 9:00 AM",
+    "9:00 - 11:00 AM",
+    "11:00 AM - 1:00 PM",
+    "4:00 - 7:00 PM"
+   ],
+   "image": "https://images.unsplash.com/photo-1615631648086-325025c9e51e?auto=format&fit=crop&w=900&q=80"
+  },
+  "doctorVisit": {
+   "title": "Doctor Home Visit",
+   "description": "Request a qualified doctor for home consultation for elderly or non-ambulatory patients.",
+   "fee": "Starts at ₹800",
+   "image": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=900&q=80"
+  }
+ },
+ "videos": [
+  {
+   "id": "vid-1",
+   "title": "Understanding Biochemistry & Routine Blood Markers",
+   "thumbnail": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&q=80",
+   "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+   "id": "vid-2",
+   "title": "Why Regular Preventive Health Checkups Saved Lives",
+   "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+   "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+   "id": "vid-3",
+   "title": "Molecular Testing & DNA Diagnostics Explained",
+   "thumbnail": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+   "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+   "id": "vid-4",
+   "title": "How a Blood Sample Is Tested",
+   "thumbnail": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&q=80",
+   "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+   "id": "vid-5",
+   "title": "Diabetes: Know Your HbA1c",
+   "thumbnail": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+   "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+   "id": "vid-6",
+   "title": "Thyroid Health Explained",
+   "thumbnail": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+   "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+ ],
+ "blogs": [
+  {
+   "id": "blog-1",
+   "title": "5 Key Health Markers You Must Monitor After Age 40",
+   "excerpt": "Learn about blood sugar levels, lipid profiles, and thyroid markers essential for long-term longevity.",
+   "date": "Sep 15, 2026",
+   "author": "Dr. Devjit Majumdar",
+   "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+   "id": "blog-2",
+   "title": "How to Prepare for a Fasting Blood Test",
+   "excerpt": "Everything you need to know about water intake, medication, and fasting durations before blood collection.",
+   "date": "Aug 28, 2026",
+   "author": "Pathology Team",
+   "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+   "id": "blog-3",
+   "title": "Understanding Your CBC Report",
+   "excerpt": "Simple, doctor-reviewed guidance to help you understand your tests.",
+   "date": "Aug 2026",
+   "author": "Pathology Team",
+   "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+   "id": "blog-4",
+   "title": "Home Sample Collection: What to Expect",
+   "excerpt": "Simple, doctor-reviewed guidance to help you understand your tests.",
+   "date": "Aug 2026",
+   "author": "Pathology Team",
+   "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+   "id": "blog-5",
+   "title": "Vitamin D Deficiency in India",
+   "excerpt": "Simple, doctor-reviewed guidance to help you understand your tests.",
+   "date": "Aug 2026",
+   "author": "Pathology Team",
+   "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80"
+  }
+ ],
+ "services": [
+  {
+   "type": "appointment",
+   "title": "Book an Appointment",
+   "icon": "fa-calendar-check",
+   "text": "Visit the lab or consult a specialist doctor."
+  },
+  {
+   "type": "home",
+   "title": "Home Collection",
+   "icon": "fa-house-medical",
+   "text": "Safe and hygienic blood/urine sample collection by trained phlebotomists at your doorstep."
+  },
+  {
+   "type": "doctorvisit",
+   "title": "Doctor Home Visit",
+   "icon": "fa-user-doctor",
+   "text": "Request a qualified doctor for home consultation for elderly or non-ambulatory patients."
+  }
+ ],
+ "testimonials": [
+  {
+   "name": "Rina D.",
+   "text": "Collection boy came on time, report on WhatsApp by evening.",
+   "rating": 5
+  },
+  {
+   "name": "Suman P.",
+   "text": "Clean lab, helpful staff and fair prices.",
+   "rating": 5
+  },
+  {
+   "name": "A. Ghosh",
+   "text": "Doctor home visit for my father was smooth and caring.",
+   "rating": 4
+  }
+ ],
+ "footer": {
+  "about": "Accurate, affordable and timely diagnostic testing for families across South Kolkata — backed by NABL standards and a caring team.",
+  "badges": [
+   "NABL Accredited",
+   "ISO Certified",
+   "Digital Reports"
+  ]
+ }
+}
